@@ -172,6 +172,9 @@ jobs:
           python3 .\build.py --portable --flutter --skip-portable-pack --hwcodec ${{ matrix.job.build-args }}
           mv ./flutter/build/windows/${{ matrix.job.flutter-arch }}/runner/Release ./rustdesk
 
+          # Copia o seu .exe customizado para rustdesk.exe para enganar os scripts de empacotamento:
+          Get-ChildItem ./rustdesk/*.exe | ForEach-Object { Copy-Item $_.FullName "./rustdesk/rustdesk.exe" -Force }
+
           Invoke-WebRequest -Uri https://github.com/rustdesk-org/rdev/releases/download/usbmmidd_v2/usbmmidd_v2.zip -OutFile usbmmidd_v2.zip
           Expand-Archive usbmmidd_v2.zip -DestinationPath .
           Remove-Item -Path usbmmidd_v2\Win32 -Recurse
