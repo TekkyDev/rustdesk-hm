@@ -128,10 +128,9 @@ Future<void> initEnv(String appType) async {
   // focus on multi-ffi on desktop first
   await initGlobalFFI();
 
-  // =================================================================
-  // 🟢 FORÇAR SERVIDOR E CHAVE TEKKY HELP:
-  // Executado logo após inicializar a ponte FFI com o Rust
-  bind.mainSetOption('custom-rendezvous-server', 'hmsrv.ddns.net');
+// =================================================================
+  // 🟢 FORÇAR SERVIDOR E CHAVE TEKKY HELP (SINTAXE CORRETA):
+  bind.mainSetOption(key: 'custom-rendezvous-server', value: 'hmsrv.ddns.net');
   // =================================================================
 
   // await Firebase.initializeApp();
