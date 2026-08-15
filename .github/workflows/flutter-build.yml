@@ -90,7 +90,21 @@ jobs:
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           submodules: recursive
-
+      
+      - name: Aplicar Travas no Config Rust
+        shell: powershell
+        run: |
+          $file = "libs/hbb_common/src/config.rs"
+          if (Test-Path $file) {
+            Write-Host "Aplicando travas de Incoming Only e Disable Settings..."
+            
+            # Força o is_incoming_only para true
+            (Get-Content $file) -replace '\.map_or\(false, \|x\| x == \("incoming"\)\)', '.map_or(true, |x| x == ("incoming"))' | Set-Content $file
+            
+            # Força o is_disable_settings para true
+            (Get-Content $file) -replace 'pub fn is_disable_settings\(\) -> bool \{', 'pub fn is_disable_settings() -> bool { return true;' | Set-Content $file
+          }
+          
       - name: Restore bridge files
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
