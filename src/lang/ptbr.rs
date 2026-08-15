@@ -145,7 +145,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("Failed to make direct connection to remote desktop", "Falha ao fazer conexão direta ao desktop remoto"),
         ("Set Password", "Definir Senha"),
         ("OS Password", "Senha do Sistema"),
-        ("install_tip", "Para um melhor atendimento, instale usando o botão abaixo"),
+        ("install_tip", "Para um melhor atendimento, instale o Tekky Help clicando no botão abaixo"),
         ("Click to upgrade", "Iniciar atualização"),
         ("Configure", "Configurar"),
         ("config_acc", "Para controlar seu computador remotamente, você precisa conceder ao RustDesk permissões de \"Acessibilidade\"."),
