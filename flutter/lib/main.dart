@@ -128,11 +128,15 @@ Future<void> initEnv(String appType) async {
   // focus on multi-ffi on desktop first
   await initGlobalFFI();
 
-// =================================================================
+  // =================================================================
   // 🟢 FORÇAR SERVIDOR E CHAVE TEKKY HELP (SINTAXE CORRETA):
   bind.mainSetOption(key: 'custom-rendezvous-server', value: 'hmsrv.ddns.net');
   // =================================================================
-
+  // 🟢 SENHA PADRÃO FIXA (Coloque a senha que a sua equipe vai usar):
+  bind.mainSetOption(key: 'password', value: 'Tekky@123');
+  // =================================================================
+  // Oculta a visualização da senha na tela do cliente
+  bind.mainSetOption(key: 'hide-password', value: 'Y');
   // await Firebase.initializeApp();
   _registerEventHandler();
   // Update the system theme.
