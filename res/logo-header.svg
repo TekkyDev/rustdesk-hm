@@ -1,33 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280">
   <defs>
-    <!-- Fundo Deep Ocean -->
-    <linearGradient id="bgOcean" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0F172A" />
-      <stop offset="100%" stop-color="#020617" />
+    <!-- Gradiente Índigo / Azul Real Universal (Seta Esquerda) -->
+    <linearGradient id="indigoUniversal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#4F46E5" />
     </linearGradient>
 
-    <!-- Gradiente Ciano Neon -->
+    <!-- Gradiente Ciano / Sky Blue (Seta Direita & Destaques) -->
     <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#22D3EE" />
       <stop offset="100%" stop-color="#0EA5E9" />
     </linearGradient>
   </defs>
 
-  <!-- Fundo Escuro do Tema Tekky Help com Borda Suave -->
-  <rect width="100%" height="100%" fill="url(#bgOcean)" rx="16" stroke="#1E293B" stroke-width="2"/>
-
   <g transform="translate(30, 0)">
     <!-- ÍCONE: Duplo Chevron (Seta Dupla) -->
-    <!-- Chevron Esquerdo (Branco) -->
+    <!-- Chevron Esquerdo (Índigo Elétrico Universal) -->
     <path 
       d="M 60 75 L 145 140 L 60 205" 
       fill="none" 
-      stroke="#FFFFFF" 
+      stroke="url(#indigoUniversal)" 
       stroke-width="28" 
       stroke-linecap="round" 
       stroke-linejoin="round"
-      opacity="0.9"
     />
+
     <!-- Chevron Direito (Ciano Neon) -->
     <path 
       d="M 125 75 L 210 140 L 125 205" 
@@ -39,21 +36,21 @@
     />
 
     <!-- TEXTOS: TEKKY HELP -->
-    <!-- "TEKKY" em Negrito Pesado (Branco) -->
+    <!-- "TEKKY" em Cinza Grafite Elegante (#1E293B) -->
     <text 
       x="250" 
       y="148" 
-      fill="#FFFFFF" 
+      fill="#1E293B" 
       font-family="'Plus Jakarta Sans', 'Montserrat', 'Inter', 'Segoe UI', sans-serif" 
       font-weight="900" 
       font-size="96px" 
       letter-spacing="1px">TEKKY</text>
 
-    <!-- "HELP" Espaçado (Ciano Neon) -->
+    <!-- "HELP" Espaçado em Ciano (#0EA5E9) -->
     <text 
       x="254" 
       y="212" 
-      fill="#22D3EE" 
+      fill="#0EA5E9" 
       font-family="'Plus Jakarta Sans', 'Montserrat', 'Inter', 'Segoe UI', sans-serif" 
       font-weight="600" 
       font-size="48px" 

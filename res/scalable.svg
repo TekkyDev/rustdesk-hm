@@ -8,39 +8,34 @@
    height="32"
    xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Gradiente Ciano / Sky Blue da Marca -->
+    <!-- Gradiente Índigo / Azul Real Universal (Seta Esquerda) -->
+    <linearGradient id="indigoUniversal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+
+    <!-- Gradiente Ciano / Sky Blue da Marca (Seta Direita) -->
     <linearGradient id="cyanSkyLight" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#22D3EE" />
       <stop offset="100%" stop-color="#0EA5E9" />
     </linearGradient>
   </defs>
 
-  <!-- Fundo Squircle Suave Light (Cinza Frio / Slate) -->
-  <rect
-     x="66.993"
-     y="897.484"
-     width="32"
-     height="32"
-     rx="7.5"
-     fill="#F1F5F9"
-     stroke="#E2E8F0"
-     stroke-width="1" />
-
-  <!-- Seta Esquerda (Cinza Grafite Elegante) -->
+  <!-- Seta Esquerda (Índigo Elétrico / Azul Real - Funciona em Light e Dark) -->
   <path
-     d="M 74.5 905 L 83.5 913.5 L 74.5 922"
+     d="M 69.493 899.984 L 83.993 913.484 L 69.493 926.984"
      fill="none"
-     stroke="#334155"
-     stroke-width="4"
+     stroke="url(#indigoUniversal)"
+     stroke-width="5"
      stroke-linecap="round"
      stroke-linejoin="round" />
 
   <!-- Seta Direita (Ciano / Sky Blue) -->
   <path
-     d="M 82.5 905 L 91.5 913.5 L 82.5 922"
+     d="M 81.993 899.984 L 96.493 913.484 L 81.993 926.984"
      fill="none"
      stroke="url(#cyanSkyLight)"
-     stroke-width="4"
+     stroke-width="5"
      stroke-linecap="round"
      stroke-linejoin="round" />
 </svg>

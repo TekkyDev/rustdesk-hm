@@ -1,41 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
   <defs>
-    <!-- Fundo Deep Ocean -->
-    <linearGradient id="bgOcean256" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0F172A" />
-      <stop offset="100%" stop-color="#020617" />
+    <!-- Gradiente Índigo / Azul Real Universal (Seta Esquerda) -->
+    <linearGradient id="indigoUniversal256" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#4F46E5" />
     </linearGradient>
 
-    <!-- Gradiente Ciano / Sky Blue -->
+    <!-- Gradiente Ciano / Sky Blue da Marca (Seta Direita) -->
     <linearGradient id="cyanGlow256" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#22D3EE" />
       <stop offset="100%" stop-color="#0EA5E9" />
     </linearGradient>
   </defs>
 
-  <!-- Fundo Squircle preenchendo 100% (0 a 256px) -->
-  <rect x="0" y="0" width="256" height="256" rx="60" fill="url(#bgOcean256)" />
-
-  <!-- Borda interna sutil -->
-  <rect x="4" y="4" width="248" height="248" rx="56" fill="none" stroke="#334155" stroke-width="8" opacity="0.6" />
-
-  <!-- Seta Esquerda (Branco Suave - Multiplicada x8) -->
+  <!-- Seta Esquerda (Índigo Elétrico - Funciona em Light & Dark) -->
   <path 
-    d="M 60 60 L 132 128 L 60 196" 
+    d="M 20 20 L 136 128 L 20 236" 
     fill="none" 
-    stroke="#FFFFFF" 
-    stroke-width="32" 
+    stroke="url(#indigoUniversal256)" 
+    stroke-width="40" 
     stroke-linecap="round" 
     stroke-linejoin="round" 
-    opacity="0.85"
   />
 
-  <!-- Seta Direita (Ciano Neon - Multiplicada x8) -->
+  <!-- Seta Direita (Ciano Neon) -->
   <path 
-    d="M 124 60 L 196 128 L 124 196" 
+    d="M 120 20 L 236 128 L 120 236" 
     fill="none" 
     stroke="url(#cyanGlow256)" 
-    stroke-width="32" 
+    stroke-width="40" 
     stroke-linecap="round" 
     stroke-linejoin="round"
   />
