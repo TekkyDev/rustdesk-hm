@@ -288,3 +288,10 @@ jobs:
           files: |
             ./SignOutput/rustdesk-*.msi
             ./SignOutput/rustdesk-*.exe
+            
+      - name: Upload Tekky Help Portable EXE
+        if: env.UPLOAD_ARTIFACT == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: TekkyHelp-Portable-EXE
+          path: ./SignOutput/rustdesk-*.exe
