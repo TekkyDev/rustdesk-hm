@@ -109,6 +109,8 @@ class _PeerTabPageState extends State<PeerTabPage>
       textBaseline: TextBaseline.ideographic,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // ======= COMENTE O BLOCO ABAIXO COM /* e */ =======
+        /*
         Obx(() => SizedBox(
               height: 32,
               child: Container(
@@ -129,7 +131,10 @@ class _PeerTabPageState extends State<PeerTabPage>
                 )),
               ),
             ).paddingOnly(right: stateGlobal.isPortrait.isTrue ? 0 : 12)),
-        _createPeersView(),
+        */
+        // ====================================================
+
+        _createPeersView(), // Mantém o painel de itens recentes (opcional)
       ],
     );
   }
