@@ -131,6 +131,7 @@ Future<void> initEnv(String appType) async {
   // =================================================================
   // 🟢 FORÇAR SERVIDOR E CHAVE TEKKY HELP (SINTAXE CORRETA):
   bind.mainSetOption(key: 'custom-rendezvous-server', value: 'hmsrv.ddns.net');
+  bind.mainSetOption(key: 'key', value: 'IFMQety01CxXVvikVAS3m2s4hzh1rPxTbj1XEEGTCxM=');
   // =================================================================
   // 🟢 SENHA PADRÃO FIXA (Coloque a senha que a sua equipe vai usar):
   bind.mainSetOption(key: 'password', value: 'Tekky@123');
