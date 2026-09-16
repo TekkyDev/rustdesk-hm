@@ -19,12 +19,20 @@ jobs:
         with:
           targets: aarch64-apple-darwin
 
+      - name: Instalar Gerador da Ponte Rust-Flutter
+        run: |
+          cargo install flutter_rust_bridge_codegen --version 1.80.1 --locked
+
       - name: Configurar Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.24.x'
           channel: 'stable'
           cache: true
+
+      - name: Gerar Ponte de Código (generated_bridge.dart)
+        run: |
+          flutter_rust_bridge_codegen -r src/flutter_ffi.rs -d flutter/lib/generated_bridge.dart
 
       - name: Instalar Dependências do Flutter
         run: |
