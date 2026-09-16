@@ -1,0 +1,52 @@
+name: Build macOS (Tekky Help)
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-macos:
+    runs-on: macos-14 # macOS 14 nativo em Apple Silicon (M1/M2)
+    
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-apple-darwin
+
+      - name: Configurar Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.19.x'
+          channel: 'stable'
+          cache: true
+
+      - name: Instalar Dependências do Flutter
+        run: |
+          cd flutter
+          flutter pub get
+
+      - name: Gerar Ícones Nativo do macOS
+        run: |
+          cd flutter
+          flutter pub run flutter_launcher_icons || true
+
+      - name: Compilar App para macOS
+        run: |
+          cd flutter
+          flutter build macos --release --target-platform darwin-arm64
+
+      - name: Compactar Executável (.app)
+        run: |
+          cd flutter/build/macos/Build/Products/Release
+          zip -r "TekkyHelp-macOS-ARM64.zip" *.app
+
+      - name: Enviar Artefato para Download
+        uses: actions/upload-artifact@v4
+        with:
+          name: TekkyHelp-macOS-ARM64
+          path: flutter/build/macos/Build/Products/Release/TekkyHelp-macOS-ARM64.zip
