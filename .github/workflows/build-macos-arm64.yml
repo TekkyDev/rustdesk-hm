@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout do Repositório
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       - name: Configurar Toolchain do Rust
         uses: dtolnay/rust-toolchain@stable
