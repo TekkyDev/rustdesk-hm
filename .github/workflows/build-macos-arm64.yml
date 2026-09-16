@@ -39,7 +39,7 @@ jobs:
       - name: Compilar para macOS (Apple Silicon ARM64)
         run: |
           cd flutter
-          flutter build macos --release --target-platform darwin-arm64
+          flutter build macos --release
 
       - name: Compactar o App (.app para .zip)
         run: |
